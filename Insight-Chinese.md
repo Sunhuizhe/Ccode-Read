@@ -1,7 +1,7 @@
 # Insight
 > 了解如何使用你的工具通过[Google Analytics](https://baike.baidu.com/item/google%20analytics/74509?fr=aladdin) 或者 [Yandex.Metrica](https://metrica.yandex.com/about?)做匿名报告。
 ## 安装
-  $ npm install insight
+    $ npm install insight
 ## 获取数据/生成仪表板
 ### [Google Analytics](https://baike.baidu.com/item/google%20analytics/74509?fr=aladdin)
 * 使用[Embed API](https://developers.google.com/analytics/devguides/reporting/embed/v1/)嵌入图表
