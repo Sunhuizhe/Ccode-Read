@@ -30,24 +30,24 @@ Insight非常关心用户数据的安全，对于它跟踪的数据力求做到�
     const pkg = require('./package.json');
 
     const insight = new Insight({
-	//GA追踪码
-	trackingCode: 'UA-XXXXXXXX-X',
-	pkg
+	    //GA追踪码
+	    trackingCode: 'UA-XXXXXXXX-X',
+	    pkg
     });
 
     //第一次请求许可
     if (insight.optOut === undefined) {
-	insight.askPermission();
+	    insight.askPermission();
     }
 
     insight.track('foo', 'bar');
     //按照`/foo/bar`格式记录
 
     insight.trackEvent({
-	category: 'eventCategory',
-	action: 'eventAction',
-	label: 'eventLabel',
-	value: 'eventValue'
+	    category: 'eventCategory',
+	    action: 'eventAction',
+	    label: 'eventLabel',
+	    value: 'eventValue'
     });
     //记录behavior/events 部分
 ### Yandex.Metrica
@@ -55,15 +55,15 @@ Insight非常关心用户数据的安全，对于它跟踪的数据力求做到�
     const pkg = require('./package.json');
 
     const insight = new Insight({
-	// Yandex.Metrica 计数id
-	trackingCode: 'XXXXXXXXX'
-	trackingProvider: 'yandex',
-	pkg
+	    // Yandex.Metrica 计数id
+	    trackingCode: 'XXXXXXXXX'
+	    trackingProvider: 'yandex',
+	    pkg
     });
 
     // 第一次请求许可
     if (insight.optOut === undefined) {
-	insight.askPermission();
+	    insight.askPermission();
     }
 
     insight.track('foo', 'bar');
