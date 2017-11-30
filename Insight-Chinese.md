@@ -93,20 +93,20 @@ Insight非常关心用户数据的安全，对于它跟踪的数据力求做到�
 ##### version
 类型：`string`
 
-默认：`undefined`
+默认：`'undefined'`
 #### config
 类型：`object`
 
 默认：一个configstore实例
 
-如果你想用自己的配置机制代替默认的基于configstore的实例，你可以提供一个可以实现两种同步方法的对象：
-* get(key)
-* set(key, value)
+如果你想用自己的配置机制代替默认的基于`[configstore](https://github.com/yeoman/configstore)`的实例，你可以提供一个可以实现两种同步方法的对象：
+* `get(key`)
+* `set(key, value)`
 ### 实例方法
 #### .track(keyword, [keyword, ...])
 参数作为Analytics的一条结束路径。
 
-.track('init', 'backbone') 变成 /init/backbone
+`.track('init', 'backbone')` 变成 `/init/backbone`
 #### .trackEvent(options)
 可以接收事件的类型，功能，标签和值，通过选项对象在GA event tracking文档作为描述。注意：不在Yandex.Metrica上工作。
   .trackEvent({
@@ -133,11 +133,11 @@ Insight非常关心用户数据的安全，对于它跟踪的数据力求做到�
 
 事件值：与事件相关的一个数值（如：42）
 #### .askPermission([message, callback])
-得到用户的进入许可，并且在config里设置optOut属性。你也可以选择在config里手动设置optOutproperty。
+得到用户的进入许可，并且在`config`里设置`optOut`属性。你也可以选择在`config`里手动设置`optOut`属性。
 
 ![screenshot-askpermission.png](https://github.com/yeoman/insight/blob/master/screenshot-askpermission.png)
 
-可选的提供你自己的message和callback。如果message为空，默认被使用。你在提示下选择继续运行的时候，如果提示完毕并有效，回调函数会被调用，参数是error和optIn。
+可选的提供你自己的`message`和`callback`。如果`message`为`null`，默认被使用。你在提示下选择继续运行的时候，如果提示完毕并有效，回调函数会被调用，参数是`error`和`optIn`。
 #### .optOut
 返回一个布尔值，表示该用户是否退出追踪。最好只由用户行为设置，比如：一个提示。
 ## 许可证
