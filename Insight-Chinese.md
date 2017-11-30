@@ -100,7 +100,7 @@ Insight非常关心用户数据的安全，对于它跟踪的数据力求做到�
 默认：一个configstore实例
 
 如果你想用自己的配置机制代替默认的基于`[configstore](https://github.com/yeoman/configstore)`的实例，你可以提供一个可以实现两种同步方法的对象：
-* `get(key`)
+* `get(key)`
 * `set(key, value)`
 ### 实例方法
 #### .track(keyword, [keyword, ...])
