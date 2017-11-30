@@ -3,7 +3,7 @@
 ## 安装
     $ npm install insight
 ## 获取数据/生成仪表板
-### [Google Analytics](https://baike.baidu.com/item/google%20analytics/74509?fr=aladdin)
+### Google Analytics
 * 使用[Embed API](https://developers.google.com/analytics/devguides/reporting/embed/v1/)嵌入图表
 * 使用 [Core Reporting API](https://developers.google.com/analytics/devguides/reporting/core/v3/) 或是 [Real Time Reporting API](https://developers.google.com/analytics/devguides/reporting/realtime/v3/) 接收原始数据，然后将结果变成可视化图像，e.g. [metrics from Bower](https://bower.io/stats/)
 * 直接使用GA的仪表板，比如：[metrics from Yeoman](http://yeoman.io/)
