@@ -3,13 +3,13 @@
 ## 安装
     $ npm install insight
 ## 获取数据/生成仪表板
-### Google Analytics
+### Google Analytics(GA)
 * 使用[Embed API](https://developers.google.com/analytics/devguides/reporting/embed/v1/)嵌入图表
 * 使用 [Core Reporting API](https://developers.google.com/analytics/devguides/reporting/core/v3/) 或是 [Real Time Reporting API](https://developers.google.com/analytics/devguides/reporting/realtime/v3/) 接收原始数据，然后将结果变成可视化图像，e.g. [metrics from Bower](https://bower.io/stats/)
 * 直接使用GA的仪表板，比如：[metrics from Yeoman](http://yeoman.io/)
 ![screenshot-ga-dashboard.png](https://github.com/yeoman/insight/blob/master/screenshot-ga-dashboard.png)
 ## Provider设置
-### Google Analytics
+### Google Analytics(GA)
 目前，由于使用的URL的原因，Insight必须设置为GA的web跟踪。未来的计划包括重构使用GA的基于应用程序的跟踪和测量协议。
 
 debug调试中，Insight可以跟踪操作系统、Node.js以及实现了Insight的应用程序的版本。请按照下面的截图进行自定义设置。在Insight重构为基于应用程序的跟踪之前，这是一个临时的解决方案。
@@ -26,49 +26,49 @@ Insight非常关心用户数据的安全，对于它跟踪的数据力求做到�
 * 一个随机的、绝对的匿名ID
 ## 使用
 ### Google Analytics
-  const Insight = require('insight');
-  const pkg = require('./package.json');
-  
-  const insight = new Insight({
+    const Insight = require('insight');
+    const pkg = require('./package.json');
+    
+    const insight = new Insight({
   
 	//GA追踪码
 	trackingCode: 'UA-XXXXXXXX-X',
 	pkg
-  });
+    });
   
-  //第一次请求许可
-  if (insight.optOut === undefined) {
+    //第一次请求许可
+    if (insight.optOut === undefined) {
 	  insight.askPermission();
-  }
-
-  insight.track('foo', 'bar');
+    }
   
-  //按照`/foo/bar`格式记录
-  insight.trackEvent({
+    insight.track('foo', 'bar');
+    
+    //按照`/foo/bar`格式记录
+    insight.trackEvent({
 	  category: 'eventCategory',
 	  action: 'eventAction',
 	  label: 'eventLabel',
 	  value: 'eventValue'
-  });
-  //记录behavior/events 部分
-### [Yandex.Metrica](https://metrica.yandex.com/about?)
-  const Insight = require('insight');
-  const pkg = require('./package.json');
-  
-  const insight = new Insight({
+    });
+    //记录behavior/events 部分
+### Yandex.Metrica
+    const Insight = require('insight');
+    const pkg = require('./package.json');
+    
+    const insight = new Insight({
 	  // Yandex.Metrica 计数id
 	  trackingCode: 'XXXXXXXXX'
 	  trackingProvider: 'yandex',
 	  pkg
-  });
+    });
   
-  // 第一次请求许可
-  if (insight.optOut === undefined) {
+    // 第一次请求许可
+    if (insight.optOut === undefined) {
 	  insight.askPermission();
-  }
+    }
   
-  insight.track('foo', 'bar');
-  // 按照`http://<package-name>.insight/foo/bar`格式记录
+    insight.track('foo', 'bar');
+    // 按照`http://<package-name>.insight/foo/bar`格式记录
 ## API
 ### Insight(options)
 #### trackingCode
