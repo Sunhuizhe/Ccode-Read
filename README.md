@@ -10,6 +10,15 @@
 ## 项目名称
 Insight
 
+## 项目类型
+第三方库
+
+## 项目功能
+了解如何使用你的工具通过Google Analytics 或者 Yandex.Metrica做匿名报告。
+
+## 入口文件
+index.js
+
 ## 项目依赖的模块
 * async
 * chalk
@@ -21,3 +30,5 @@ Insight
 * tough-cookie
 * uuid
 
+## 测试框架
+ava
