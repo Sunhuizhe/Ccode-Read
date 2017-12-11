@@ -1,4 +1,4 @@
-# Insight 项目解读 [![Build Status](https://travis-ci.org/Sunhuizhe/code-read-insight.svg?branch=master)](https://travis-ci.org/Sunhuizhe/code-read-insight)
+# Insight 项目解读
 
 ## 资源
 * [readme文件](https://github.com/yeoman/insight/blob/master/readme.md)
