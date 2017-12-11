@@ -1,4 +1,4 @@
-# Insight 项目解读 [![Build Status](https://travis-ci.org/Sunhuizhe/code-read-insight.svg?branch=master)](https://travis-ci.org/Sunhuizhe/code-read-insight)
+# Insight 项目解读
 
 ## 资源
 * [readme文件](https://github.com/yeoman/insight/blob/master/readme.md)
@@ -9,6 +9,15 @@
 * [push.js解读](https://github.com/Sunhuizhe/code-read-insight/blob/master/lib/push.js)
 ## 项目名称
 Insight
+
+## 项目类型
+第三方库
+
+## 项目功能
+了解如何使用你的工具通过Google Analytics 或者 Yandex.Metrica做匿名报告。
+
+## 入口文件
+index.js
 
 ## 项目依赖的模块
 * async
@@ -21,3 +30,5 @@ Insight
 * tough-cookie
 * uuid
 
+## 测试框架
+ava
