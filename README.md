@@ -1,5 +1,11 @@
 # Insight 项目解读
 ## 项目分析
+### 项目名称
+Insight
+### 项目类型
+第三方库
+### 项目功能
+了解如何使用你的工具通过Google Analytics 或者 Yandex.Metrica做匿名报告。
 ### 包含文件
 * [readme文件](https://github.com/yeoman/insight/blob/master/readme.md)
 * [readme中文文件](https://github.com/Sunhuizhe/Code-Read/blob/master/Insight-Chinese.md)
@@ -15,26 +21,20 @@
 * .png 文件
 > 各种成果及过程图片文件
 ### 包含文件夹
-* lib
-> 主要代码文件文件夹
-* test
+* [lib](https://github.com/yeoman/insight/tree/master/lib)
+> 程序代码文件夹
+* [test](https://github.com/yeoman/insight/tree/master/test)
 > 测试代码文件夹
-### 项目名称
-Insight
-### 项目类型
-第三方库
-### 项目功能
-了解如何使用你的工具通过Google Analytics 或者 Yandex.Metrica做匿名报告。
+### 入口文件
+index.js
+
+> 暴露Insight类，使其作为一个模块被其他文件引用。
 ### 项目依赖的模块
 * async：异步流程控制
 * lodash.debounce：返回为 nodejs 模块
 * request：HTTP 请求模块
 * tough-cookie：创建 cookie 保存数据用以设置 url
 * uuid：生成一个唯一的 uuid
-### 入口文件
-index.js
-
-暴露Insight类作为一个模块被其他文件引用。
 
 ## 代码分析
 ### 文件
