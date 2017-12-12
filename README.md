@@ -85,7 +85,7 @@ Travis CI
 
 > 参数:
 
-> {string} attr 属性
+> {Array} attr 属性
 
 > {function} callback() 回调函数
 
