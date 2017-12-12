@@ -63,30 +63,31 @@ Travis CI
 ## 解读收获
 1. 关于 nodejs 不支持 es6 中的 import 语法问题
 > 刚开始装了AVA之后，测试文件依然运行不成功，报错指向 import 语法。 nodejs 还没有支持 import 语法，升级 nodejs 版本也没有解决问题。百度之，在多次试验之后，有一个方法生效了。装了一个插件！[官方网址](http://babeljs.io/docs/plugins/transform-es2015-modules-commonjs/)。按照网站给出的方法运行命令安装，应该是将 ES6 Modules 转换成 nodejs 通用的 commonjs 形式。
-> 注意点：安装插件时配置 .babelrc 文件，只能在一个 {} 里配置多个属性，写多个 {} 不能正确读取，会报错。
+
+> 注意：安装插件时配置 .babelrc 文件，只能在一个 {} 里配置多个属性，写多个 {} 不能正确读取，会报错。
 2. 关于程序代码的一些函数的学习
 
 * Object.assign(q, msg.queue);
 
-功能：将源对象中可枚举的自有属性值拷贝到目标对象中，源对象可以有任意多个。
+> 功能：将源对象中可枚举的自有属性值拷贝到目标对象中，源对象可以有任意多个。
 
-参数：
+> 参数：
 
-q {object} target 目标对象
+> q {object} target 目标对象
 
-msg.queue {object} 源对象,任意个
+> msg.queue {object} 源对象,任意个
 
-返回值：
+> 返回值：
 
-{object} target 返回目标对象
+> {object} target 返回目标对象
 * async.forEachSeries(Object.keys(q), cb(el, cb))
-功能：遍历对象的属性，对每个属性执行回调函数
+> 功能：遍历对象的属性，对每个属性执行回调函数
 
-参数:
+> 参数:
 
-{string} attr 属性
+> {string} attr 属性
 
-{function} callback() 回调函数
+> {function} callback() 回调函数
 
 ## LICENSE
 MIT
